@@ -1,390 +1,73 @@
 ---
-title: Getting Started
+title: 시작해보기
 tags: 
- - jekyll
- - github
-description: Getting started with Docsy Jekyll
+description: VM을 사용하기 위한 첫시도
 ---
 
-# Getting Started
+# 환영합니다!
+일단 저희 D Cloud를 선택해 주셔서 감사합니다. <Br/>
+저희 D Cloud를 이용해 주시기 위해서는 아래에 신청서를 설명해주셔야 합니다.
 
-## Features
+## 일반 VM
+일반 VM을 이용하는 경우 아래 파일을 받아서 작성후 카카오톡 채팅방으로 보내주시기 바람니다.
 
-### User Interaction
+[신청서 다운받기](https://docs.google.com/document/d/1-TukQvu_UbS8mZtI0uJXNFFXQo_HhBV6/edit?usp=sharing&ouid=115060652334784734708&rtpof=true&sd=true)
 
+> 파일을 열면 문서에서 작업하지말고 따로 다운로드를 받아서 작성해 주시기 바람니다.
+> 구글 뷰어에서 작성하는 경우 글자 깨짐이나 테이블이 이상하게 변할수 있습니다.
 
-On the right side of any page, you'll notice links to edit the page, or
-open an issue. This ensures that any time you have a question or want to 
-suggest or request a change, you can do so immediately and link directly
-to the section of interest. The sections on the page also have permalinks so
-you can link directly to them.
+오픈채팅방으로 신청서 보내기
+[오픈채팅방 링크](https://open.kakao.com/o/sEcpxvdg)
 
-### Search
+# 작성 행동 강령(일반VM)
+저희 신청서를 작성할때는 아래와 같은 작성법을 숙지하고 작성을 해야합니다. <br/>
+다르게 작성하거나 이상하게 적은 경우 반려 및 추가 의견을 요구할수 있습니다.
 
-The entire site, including posts and documentation, is indexed and then available
-for search at the top or side of the page. Give it a try! The content is rendered
-into window data that is used by lunr.js to generate the search results.
-If you want to exclude any file from search, add this to its front end matter:
+## 신청자 정보 신청 정보
+<img data-action="zoom" src='{{ "/assets/img/username.png" | relative_url }}' alt='absolute'>
+<Br/>
+위 정보는 자신이 해당되는 내용만 작성을 해서 넣어 주심시면 됨니다.
 
-```
----
-layout: null
-excluded_in_search: true
----
-```
+## 서버 신청 정보
 
-The example above is for a javascript file in the assets folder that is used as a template,
-but should not be included in search.
+<img data-action="zoom" src='{{ "/assets/img/serverinfo.png" | relative_url }}' alt='absolute'>
+<Br/>
+위사항을 작성 할때는 매우 신중하게 작성해서 제출을 해야합니다. 정보 전달이 어려운 경우 생성 제안 및 지연되는 사건이 벌어짐니다.
 
-### External Search
+## 서버 신청 용어 정리
+### 서버명
+서버를 식별하기 위해 서버명을 작성을 해줘야 합니다.
+> 작성 안할 경우 관리자가 임시로 작성할수 있습니다.
 
-If you have an external site with a search GET endpoint (meaning one that ends
-in `?q=<term>`, then you can automatically link page tags to search this endpoint.
-For example, on an HPC site I'd want a tag like "mpi" to do a search on 
-[http://ask.cyberinfrastructure.org](http://ask.cyberinfrastructure.org) for mpi.
-See the [tags](#tags) section below for how to configure this.
-
-### Documentation
+### 서버 사양
+VM의 성능을 어떻게 설정하는 곳인지 적는 곳입니다. <Br/>
+저희는 기본적으로 CPU: 2코어 램: 8기가 스토리지: 80기가를 일반적으로 제공을합니다.<Br/>
+하지만 자원이 더필요하는 경우 이곳에 변경 사항을 적어서 제출해주시기 바람니다.
+> 너무 많은 자원을 신청할 경우 반려될 가능성이 높습니다.
 
-Documentation pages should be written in the `docs` folder of the repository,
-and you are allowed to use whatever level of nesting (subfolders) that 
-works for you! It's a Jekyll [collection](https://jekyllrb.com/docs/collections/), which means that you
-can add other content (images, scripts) and it will be included for linking to.
-To create subfolders with files, you can simply create new markdon files. For example:
-
- - `_docs/subfolder/example-page.md` renders to `http://localhost:4000/docsy-jekyll/docs/subfolder/example-page/`
- - `_docs/subfolder.md` renders to `http://localhost:4000/docsy-jekyll/docs/subfolder/`
+### 운영체제
+운영체제는 저희는 기본적으로 윈도우나 리눅스를 가지고 서비스를 합니다.<Br/>
+윈도우같은 경우는 윈도우 11 Pro버전을 설치해서 배포를 해주고 있고 리눅스 같은 경우는 우분투를 기반으로 배포를 해드리고 있습니다.<Br/>
 
-And the page you are reading now renders from `_docs/getting-started.md`
-
-#### Organization
-
-The url that will render is based on the path. For example, if we had the following structure:
-
-```
-docs/
-  getting-started.md
-  clusters/
-     sherlock/
-         getting-started.md
-```
+{% include alert.html type="info" title="다른 OS가 필요한경우" %}
+다른 OS가 필요한 경우 운영체제 부분에 OS명하고 버전을 자세히 적어저 제출해주시기 바람니다.
 
-The first page (akin to the one you are reading) would render at it's path,
-`/docs/getting-started/`.
-
-
-#### Linking
-
-From that page, we could provide the
-direct path in markdown to any subfolder to link to it, such as the second
-getting started page for sherlock:
+### User ID, User PW, Root PW
+비빌번호나 아이디 같은경우 아래와 상황에서 사용되기 때문에 필히 작성을 해주셔야합니다.
 
-```
-{% raw %}[example](clusters/sherlock/getting-started.md){% endraw %}
-```
-
-[Here](example-page) is an example link to a relative path of a file (`example-page.md`)
-in the same directory, and from that page you can test linking to a subfolder.
-In the case of not having a subfolder, we could write the link out directly:
-
-```
-{% raw %}[example]({{ site.baseurl }}/docs/clusters/sherlock/getting-started.md){% endraw %}
-```
-
-or just put the relative path:
-
-```
-{% raw %}[Here](example-page){% endraw %}
-```
-
-or better, there is a shortand trick! We can use the provided "includes" 
-template to do the same based on the path to create a link:
-
-```
-{% raw %}{% include doc.html name="Sherlock Cluster" path="clusters/sherlock/getting-started" %}{% endraw %}
-```
-The path should be relative to the docs folder.
-
-### Pages
-
-The `pages` folder uses the same page layout, but is not part of the docs collection.
-The two are provided to create a distinction between website pages (e.g., about,
-feed.xml) and documentation pages.  
-
-### Navigation
-
-Whether you place your page under "pages" or "docs," for those pages that you want added to the navigation, 
-you should add them to `_data/toc.yml`. If you've defined a `permalink` in the
-front end matter, you can use that (e.g., "About" below). If you haven't and
-want to link to docs, the url is the path starting with the docs folder.
-Here is an example (currently the active example):
-
-```yaml
-- title: Documentation
-  url: docs
-  links:
-    - title: "Getting Started"
-      url: "docs/getting-started"
-      children:
-        - title: Features
-          url: "docs/getting-started#getting-started"
-        - title: Development
-          url: "docs/getting-started#development"
-        - title: Customization
-          url: "docs/getting-started#customization"
-    - title: "Extras"
-      url: "docs/extras"
-      children:
-        - title: Quizzes
-          url: "docs/extras/example-quiz"
-    - title: "About"
-      url: "about"
-    - title: "News"
-      url: "news
-```
-
-If you want to add an external url for a parent or child, do this:
-
-```yaml
-  - title: GitHub Repository
-    external_url: https://www.github.com/vsoch/mkdocs-jekyll
-```
-
-### News Posts
-
-It might be the case that your site or group has news items that would
-warrant sharing with the community, and should be available as a feed.
-For this reason, you can write traditional [posts](https://jekyllrb.com/docs/posts/) in the `_posts`
-folder that will parse into the site [feed]({{ site.baseurl }}/feed.xml)
-The bottom of the page links the user to a post archive, where posts are organized
-according to the year.
-
-### Buttons
-
-Buttons come in a nice array of colors. Here is the code for a basic example,
-and you'd want to vary the `.btn-<tag>` to get different classes.
-
-```html
-<button class="btn btn-success">.btn-success</button>
-```
-
-<button class="btn btn-success">.btn-success</button>
-<button class="btn btn-info">.btn-info</button>
-<button class="btn btn-secondary">.btn-secondary</button>
-<button class="btn btn-primary">.btn-primary</button>
-<button class="btn btn-danger">.btn-danger</button>
-<button class="btn btn-warning">.btn-warning</button>
-
-### Badges
-
-For news post items, it's nice to be able to tag it with something that indicates
-a status, such as "warning" or "alert." For this reason, you can add badges to
-the front end matter of any post page, and they will render colored by a type,
-with the tag of your choice. For example, here is an example header for
-a post:
-
-```yaml
----
-title:  "Two Thousand Nineteen"
-date:   2019-06-28 18:52:21
-categories: jekyll update
-badges:
- - type: warning
-   tag: warning-badge
- - type: danger
-   tag: danger-badge
----
-```
-
-And here is the post preview with the rendered badges that it produces:
-
-<span class="badge badge-warning">warning-badge</span>
-<span class="badge badge-danger">danger-badge</span>
-
-And the other badges that you can define include success, info, secondary,
-and primary.
-
-<span class="badge badge-success">success-badge</span>
-<span class="badge badge-info">info-badge</span>
-<span class="badge badge-secondary">secondary-badge</span>
-<span class="badge badge-primary">primary-badge</span>
-
-### Alerts
-
-{% include alert.html type="info" title="What is an alert?" content="An alert is a box that can stand out to indicate important information. You can choose from levels success, warning, danger, info, and primary. This example is an info box, and the code for another might look like this:" %}
-
-```
-{%raw%}{% include alert.html type="info" title="Here is another!" %}{%endraw%}
-```
-
-Just for fun, here are all the types:
-
-{% include alert.html type="warning" content="This is a warning" %}
-{% include alert.html type="danger" content="This alerts danger!" %}
-{% include alert.html type="success" content="This alerts success" %}
-{% include alert.html type="info" content="This is useful information." %}
-{% include alert.html type="primary" content="This is a primary alert" %}
-{% include alert.html type="secondary" content="This is a secondary alert" %}
-
-### Quotes
-
-You can include block quotes to emphasize text. 
-
-> Here is an example. Isn't this much more prominent to the user?
-
-## Development
-
-Initially (on OS X), you will need to setup [Brew](http://brew.sh/) which is a package manager for OS X and [Git](https://git-scm.com/). To install Brew and Git, run the following commands:
-
-```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install git
-```
-
-If you are on Debian/Ubuntu, then you can easily install git with `apt-get`
-
-```bash
-apt-get update && apt-get install -y git
-```
-
-### Install Jekyll
-
-You can also install Jekyll with brew.
-
-```bash
-$ brew install ruby
-$ gem install jekyll
-$ gem install bundler
-$ bundle install
-```
-
-On Ubuntu I do a different method:
-
-```bash
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-exec $SHELL
-rbenv install 2.3.1
-rbenv global 2.3.1
-gem install bundler
-rbenv rehash
-ruby -v
-
-# Rails
-curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
-sudo apt-get install -y nodejs
-gem install rails -v 4.2.6
-rbenv rehash
-
-# Jekyll
-gem install jekyll
-gem install github-pages
-gem install jekyll-sass-converter
-
-rbenv rehash
-```
-
-### Get the code
-
-You should first fork the repository to your GitHub organization or username,
-and then clone it.
-
-```bash
-$ git clone https://github.com/<username>/mkdocs-jekyll.git docs
-$ cd docs
-```
-
-You can clone the repository right to where you want to host the docs:
-
-```bash
-$ git clone https://github.com/<username>/mkdocs-jekyll.git docs
-$ cd docs
-```
-
-
-### Serve
-
-Depending on how you installed jekyll:
-
-```bash
-jekyll serve
-# or
-bundle exec jekyll serve
-```
-
-
-### Preview
-
-We provide a [CircleCI](https://circleci.com/) configuration recipe that you
-can use to preview your site on CircleCI before merging into master. You
-should follow the instructions to [set up a project](https://circleci.com/docs/enterprise/quick-start/),
-and then in the project settings be sure to enable building forked build requests,
-and to cancel redundant builds. The preview will be built on CircleCI, and saved
-to static files for you to browse. The only change you will need is to edit
-the static files location to be the name of your repository, which is at te
-bottom of the `.circleci/config.yml` file:
-
-```yaml
-      - store_artifacts:
-          path: ~/repo/_site
-          destination: mkdocs-jekyll
-```
-
-In the above, the destination should coincide with your repository name.
-Remember that for most links, CircleCI won't honor an `index.html` file in a subfolder
-(e.g., `subfolder/index.html` will not be served as `subfolder/`, so for example,
-you might need to turn this:
-
-```
-https://<circleci>/0/mkdocs-jekyll/docs/getting-started/
-```
-into this:
-
-```
-https://<circleci>/0/mkdocs-jekyll/docs/getting-started/index.html
-```
-
-## Customization
-
-#### config.yml
-
-To edit configuration values, customize the [_config.yml](_config.yml).
-Most are documented there, and please [open an issue](https://www.github.com/{{ site.github_user }}/{{ site.github_user }}/issues) if you have questions.
-
-#### Adding pages
-
-To add pages, write them into the [pages](pages) folder. 
-You define urls based on the `permalink` attribute in your pages,
-and then add them to the navigation by adding to the content of [_data/toc.yml](_data/toc.yml).
-
-#### Tags
-
-If you include tags on a page, by default they will link to the [tags page]({{ site.url }}{{ site.baseurl }}/tags) on the site. However, if you define a `tag_search_endpoint` url in your configuration file, by clicking
-the tag, the user will be taken to this page to search for it. As an example,
-we define the current search endpoint to be Ask Cyberinfrastructure, and
-page tags link to a search on it:
-
-```yaml
-tag_search_endpoint: https://ask.cyberinfrastructure.org/search?q=
-tag_color: danger # danger, success, warning, primary, secondary, info
-```
-
-Note that you can also choose a color! The tags appear at the top of the page,
-as they do on this page. The tags should be defined like this in the front end
-matter:
-
-```yaml
-tags: 
- - jekyll
- - github
-```
-
-They are appended to the first h1 block, so generally your pages should have a header.
-If you comment out this variable, then each of your tags will link to it's appropriate
-spot on the tags page linked above.
-
-```yaml
-#tag_search_endpoint: https://ask.cyberinfrastructure.org/search?q=
-tag_color: primary # danger, success, warning, primary, info, secondary
-```
+| 상황 | 필요한것|
+|--------|-------------|
+|윈도우를 설치한 경우| User ID,User PW |
+|리눅스를 설치 했는데 Root비밀번호를 설정안할 경우 | User ID,User PW |
+|리눅스를 설치 했는데 Root비밀번호를 설정 해야 할 경우 | User ID,User PW, Root PW |
 
+### 네트워크
+네트워크 같은 경우는 한개의 아이피에서 라우터를 통해 내부 IP를 부여 받는 것은 기본적으로 제공을 해주고 필수 사양합니다.<Br/> 공인 IP가 필요한 경우는 YES표시를 해주시기 바람니다.
+
+> YES로 표시한 경우 관리자가 개별적으로 설정후 통보를 해드림니다.
+
+### 요청사항
+특정 프로그램을 쓰는 경우 그 프로그램에서 필요하는 고유의 포트가 있습니다. <Br/>
+포트포워딩이 필요한 사람들은 요청사항아 아래와 예시와 같은 말을 적어주시기 바람니다.
+
+> 데이터베이스를 외부로 접속해야 하는데 내부포트는 3306입니다. 외부로 포트포워딩 부탁드림니다.
