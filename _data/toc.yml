@@ -1,12 +1,6 @@
-- title: Documentation
+- title: 문서
   url: docs
   links:
-    - title: "Getting Started"
+    - title: "시작해보기"
       url: "docs/getting-started"
-      children:
-        - title: Features
-          url: "docs/getting-started#getting-started"
-        - title: Development
-          url: "docs/getting-started#development"
-        - title: Customization
-          url: "docs/getting-started#customization"
+ 
