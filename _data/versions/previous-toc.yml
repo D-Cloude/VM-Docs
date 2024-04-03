@@ -3,4 +3,11 @@
   links:
     - title: "시작해보기"
       url: "docs/getting-started"
-
+    - title: "일반 VM"
+      url: "docs/defult-vm" 
+      children:
+        - title: 일반 VM 신청
+          url: "docs/defult-vm#%EC%9D%BC%EB%B0%98-vm"
+        - title: 일반 VM 신청 행동 강령
+          url: "docs/defult-vm#%EC%84%9C%EB%B2%84-%EC%8B%A0%EC%B2%AD-%EC%9A%A9%EC%96%B4-%EC%A0%95%EB%A6%AC"
+ 
