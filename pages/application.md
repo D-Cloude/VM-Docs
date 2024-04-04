@@ -1,12 +1,13 @@
 ---
 layout: page
-title: installation
-permalink: /installation/
+title: application
+permalink: /application/
 ---
 
-# installation
+# application
 
-D-Cloud VM 문서 페이지에 오신 것을 환영합니다! 여기서 특정 페이지로 빠르게 이동할 수 있습니다.
+Welcome to the {{ site.title }} Documentation pages! Here you can quickly jump to a 
+particular page.
 
 <div class="section-index">
     <hr class="panel-line">

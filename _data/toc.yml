@@ -4,15 +4,24 @@
     - title: "시작해보기"
       url: "docs/getting-started"
 - title: 신청하기
-  url: install
+  url: application
   links:
     - title: "일반 VM"
-      url: "docs/install/defult-vm" 
+      url: "docs/application/defult-vm" 
       children:
         - title: 일반 VM 신청
-          url: "docs/install/defult-vm#%EC%9D%BC%EB%B0%98-vm"
+          url: "docs/application/defult-vm#%EC%9D%BC%EB%B0%98-vm"
         - title: 일반 VM 신청 행동 강령
-          url: "docs/install/defult-vm#%EC%84%9C%EB%B2%84-%EC%8B%A0%EC%B2%AD-%EC%9A%A9%EC%96%B4-%EC%A0%95%EB%A6%AC"
+          url: "docs/application/defult-vm#%EC%84%9C%EB%B2%84-%EC%8B%A0%EC%B2%AD-%EC%9A%A9%EC%96%B4-%EC%A0%95%EB%A6%AC"
     - title: "GPU VM"
-      url: "docs/install/ai-vm" 
- 
+      url: "docs/application/ai-vm" 
+      children:
+        - title: GPU VM 신청 행동 강령
+          url: "docs/application/ai-vm#%EC%9E%91%EC%84%B1-%ED%96%89%EB%8F%99-%EA%B0%95%EB%A0%B9gpu-vm"
+- title: VM안에서 설치하기
+  url: installation
+  links:
+    - title: "도커 설치하기"
+      url: "docs/installation/docker-install" 
+    - title: "mysql 설치하기"
+      url: "docs/installation/mysql-install" 
