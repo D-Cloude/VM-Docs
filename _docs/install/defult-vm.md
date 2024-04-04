@@ -1,7 +1,7 @@
 ---
-title: 일반 VM
+title: 일반 VM 신청 가이드
 tags: 
-description: VM을 사용하기 위한 첫시도
+description: 일반 VM 신청하기전 보는 문서
 ---
 ## 일반 VM
 일반 VM을 이용하는 경우 아래 파일을 받아서 작성후 카카오톡 채팅방으로 보내주시기 바람니다.
